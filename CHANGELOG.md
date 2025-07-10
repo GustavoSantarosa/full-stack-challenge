@@ -6,8 +6,10 @@
 
 - Inicializado e preparando o repositório para o desenvolvimento do projeto. @GustavoSantarosa
 - Configurado regras do csfixer e pint, e tambem configurado o rector. @GustavoSantarosa
+- Configurado a middleware do padrão service no projeto. @GustavoSantarosa
 
 # EN
 
 - Initialized and prepared the repository for project development. @GustavoSantarosa
 - Configured csfixer and pint rules, and also set up rector. @GustavoSantarosa
+- Configured the service pattern middleware in the project. @GustavoSantarosa
