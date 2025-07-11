@@ -73,7 +73,7 @@
             "vendor/bin/rector process"
         ],
         "serve": [
-            "@php artisan serve --port=8001"
+            "@php artisan serve --port=8000"
         ]
     },
     "extra": {

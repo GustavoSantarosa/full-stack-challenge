@@ -16,6 +16,7 @@
 - Criado as models e suas factories. @GustavoSantarosa
 - Configurado um pacote para suprir a necessidade de comunicação com o spotify. @GustavoSantarosa
 - Criado a rota search para poder efetuar as buscas de faixas no spotify de acordo com o ISRC e tambem o index e show. @GustavoSantarosa
+- Ajustado o script do composer de porta 8001 para 8000. @GustavoSantarosa
 
 # EN
 
@@ -31,3 +32,4 @@
 - Created models and their factories. @GustavoSantarosa
 - Configured a package to meet the need for communication with Spotify. @GustavoSantarosa
 - Created the search route to perform track searches on Spotify based on ISRC, as well as the index and show routes. @GustavoSantarosa
+- Adjusted the composer script from port 8001 to 8000. @GustavoSantarosa
