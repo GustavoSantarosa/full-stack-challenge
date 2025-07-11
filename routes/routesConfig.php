@@ -18,5 +18,8 @@ return fn () => Route::namespace('App\\Http\\Controllers')
         */
         Route::prefix('tracks')
             ->name('tracks.')
-            ->group(base_path('routes/track.php'));
+            ->group(base_path('routes/api/track.php'));
+        Route::prefix('artists')
+            ->name('artists.')
+            ->group(base_path('routes/api/artist.php'));
     });

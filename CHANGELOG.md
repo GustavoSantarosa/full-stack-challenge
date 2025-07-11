@@ -20,6 +20,7 @@
 - Criado o front em angular aceitavelmente. @GustavoSantarosa
 - Criado a rota de listagem para artistas. @GustavoSantarosa
 - Liberado cors full no projeto. @GustavoSantarosa
+- Readequado a rota de listagem de faixas para dentro de api. @GustavoSantarosa
 
 # EN
 
@@ -39,3 +40,4 @@
 - Created the front end in Angular acceptably. @GustavoSantarosa
 - Created the route for listing artists. @GustavoSantarosa
 - Enabled full CORS in the project. @GustavoSantarosa
+- Reorganized the track listing route to be under the API namespace. @GustavoSantarosa
