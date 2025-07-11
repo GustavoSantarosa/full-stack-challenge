@@ -15,6 +15,7 @@
 - Iniciado a configuração do swagger. @GustavoSantarosa
 - Criado as models e suas factories. @GustavoSantarosa
 - Configurado um pacote para suprir a necessidade de comunicação com o spotify. @GustavoSantarosa
+- Criado a rota search para poder efetuar as buscas de faixas no spotify de acordo com o ISRC e tambem o index e show. @GustavoSantarosa
 
 # EN
 
@@ -29,3 +30,4 @@
 - Started configuring Swagger. @GustavoSantarosa
 - Created models and their factories. @GustavoSantarosa
 - Configured a package to meet the need for communication with Spotify. @GustavoSantarosa
+- Created the search route to perform track searches on Spotify based on ISRC, as well as the index and show routes. @GustavoSantarosa

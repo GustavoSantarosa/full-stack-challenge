@@ -11,5 +11,12 @@ return fn () => Route::namespace('App\\Http\\Controllers')
         'service',
     ])
     ->group(function () {
-        //
+        /*
+        |--------------------------------------------------------------------------
+        | Routes Default
+        |--------------------------------------------------------------------------
+        */
+        Route::prefix('tracks')
+            ->name('tracks.')
+            ->group(base_path('routes/track.php'));
     });
