@@ -14,6 +14,7 @@
 - Criado uma action do github para rodar o pint ao fazer um push. @GustavoSantarosa
 - Iniciado a configuração do swagger. @GustavoSantarosa
 - Criado as models e suas factories. @GustavoSantarosa
+- Configurado um pacote para suprir a necessidade de comunicação com o spotify. @GustavoSantarosa
 
 # EN
 
@@ -27,3 +28,4 @@
 - Created a GitHub action to run pint on push. @GustavoSantarosa
 - Started configuring Swagger. @GustavoSantarosa
 - Created models and their factories. @GustavoSantarosa
+- Configured a package to meet the need for communication with Spotify. @GustavoSantarosa
