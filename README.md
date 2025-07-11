@@ -77,7 +77,26 @@ Uma vez armazenados os dados, precisamos exibí-los através de uma webpage púb
 
 Foi desenvolvida uma solução full-stack para atender aos requisitos do desafio, utilizando Laravel como backend e MySQL como banco de dados. O sistema integra-se à API do Spotify para buscar informações das faixas musicais a partir dos ISRCs fornecidos, armazena os dados em banco e os exibe em uma página web pública, ordenados alfabeticamente pelo título da faixa.
 
-Principais funcionalidades implementadas:
+* Por conta de uma deficiencia tecnica do pacote da quantum, o search não está funcionando, mas o index e show estão funcionando perfeitamente.
+Vou ajustar isso no pacote em breve.
+## Comandos úteis via Composer
+
+Utilize os comandos abaixo para facilitar o desenvolvimento do projeto:
+
+- `composer run-script test`  
+    Executa a limpeza do cache de configuração e os testes automatizados.
+
+- `composer run-script pint`  
+    Realiza a formatação automática do código conforme padrões definidos.
+
+- `composer run-script rector`  
+    Aplica refatorações e melhorias sugeridas pelo Rector.
+
+- `composer run-script serve`  
+    Inicia o servidor de desenvolvimento Laravel na porta 8000.
+
+
+## Principais funcionalidades implementadas:
 
 - Integração com a API do Spotify para coleta dos dados das faixas.
 - Armazenamento das informações relevantes em banco de dados MySQL.
@@ -89,6 +108,9 @@ Principais funcionalidades implementadas:
 ## URLs úteis
 
 - Documentação Swagger da API: [http://localhost:8000/documentation](http://localhost:8000/documentation)
-- Página pública de exibição das faixas: `http://localhost:8000/faixas`
-- Endpoint principal da API: `http://localhost:8000/api/faixas`
-- Repositório do projeto: `<inserir URL do fork aqui>`
+- Página pública de exibição das faixas: `http://localhost:4200/tracks`
+- Página pública de busca de isrc: `http://localhost:4200/search`
+- Endpoint principal da API: `http://localhost:8000/`
+- Endpoint principal do frontend: `http://localhost:4200/`
+- Changelog do projeto: `https://github.com/ONErpm-Lab/full-stack-challenge/blob/986ad67bfcdad1ff5b6050f0f9d2dfa401cd6362/CHANGELOG.md`
+- Repositório do projeto: `https://github.com/ONErpm-Lab/full-stack-challenge`

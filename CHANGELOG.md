@@ -24,6 +24,7 @@
 - Configurado jobs para rodar como default sync, mas deixado aberto para caso queira rodar async. @GustavoSantarosa
 - Configurado o default de paginação LENGTH. @GustavoSantarosa
 - Iniciado um esboço do readme do projeto. @GustavoSantarosa
+- Ajustado o readme do projeto para conter as informações necessárias. @GustavoSantarosa
 
 # EN
 
@@ -47,3 +48,4 @@
 - Configured jobs to run as default sync, but left open for async execution if desired. @GustavoSantarosa
 - Set the default pagination length. @GustavoSantarosa
 - Started a draft of the project's README. @GustavoSantarosa
+- Adjusted the README to include necessary information. @GustavoSantarosa
