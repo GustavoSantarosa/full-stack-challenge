@@ -97,6 +97,7 @@ paths:
                       type: boolean
         '400':
           description: Erro ao buscar faixas
+
   /faixas/{id}:
     get:
       summary: Busca faixa musical pelo id
@@ -139,3 +140,25 @@ paths:
                     type: boolean
         '400':
           description: Faixa não encontrada ou já existente
+
+  /artistas:
+    get:
+      summary: Lista todos os artistas
+      tags:
+        - Artistas
+      responses:
+        '200':
+          description: Lista de artistas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                    nome:
+                      type: string
+        '400':
+          description: Erro ao buscar artistas
