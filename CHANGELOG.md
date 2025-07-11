@@ -29,6 +29,7 @@
 - Configurado notificaçoes no angular.  @GustavoSantarosa
 - Configurado o baseHandle no backend. @GustavoSantarosa
 - Ajustado o retorno 400 no angular. @GustavoSantarosa
+- Configurado o hashId no projeto. @GustavoSantarosa
 
 # EN
 
@@ -57,3 +58,4 @@
 - Configured notifications in Angular. @GustavoSantarosa
 - Configured the baseHandle in the backend. @GustavoSantarosa
 - Adjusted the 400 response in Angular. @GustavoSantarosa
+- Configured HashId in the project. @GustavoSantarosa
