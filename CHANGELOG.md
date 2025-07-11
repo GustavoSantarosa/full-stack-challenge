@@ -19,6 +19,7 @@
 - Ajustado o script do composer de porta 8001 para 8000. @GustavoSantarosa
 - Criado o front em angular aceitavelmente. @GustavoSantarosa
 - Criado a rota de listagem para artistas. @GustavoSantarosa
+- Liberado cors full no projeto. @GustavoSantarosa
 
 # EN
 
@@ -37,3 +38,4 @@
 - Adjusted the composer script from port 8001 to 8000. @GustavoSantarosa
 - Created the front end in Angular acceptably. @GustavoSantarosa
 - Created the route for listing artists. @GustavoSantarosa
+- Enabled full CORS in the project. @GustavoSantarosa
