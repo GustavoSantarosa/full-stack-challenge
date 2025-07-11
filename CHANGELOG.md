@@ -21,6 +21,7 @@
 - Criado a rota de listagem para artistas. @GustavoSantarosa
 - Liberado cors full no projeto. @GustavoSantarosa
 - Readequado a rota de listagem de faixas para dentro de api. @GustavoSantarosa
+- Configurado jobs para rodar como default sync, mas deixado aberto para caso queira rodar async. @GustavoSantarosa
 
 # EN
 
@@ -41,3 +42,4 @@
 - Created the route for listing artists. @GustavoSantarosa
 - Enabled full CORS in the project. @GustavoSantarosa
 - Reorganized the track listing route to be under the API namespace. @GustavoSantarosa
+- Configured jobs to run as default sync, but left open for async execution if desired. @GustavoSantarosa

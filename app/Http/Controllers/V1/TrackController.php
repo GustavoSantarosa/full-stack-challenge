@@ -17,9 +17,13 @@ class TrackController extends BaseController
     protected string $service  = TrackService::class;
     protected string $resource = TrackResource::class;
 
-    protected array $allowedIncludes = [];
+    protected array $allowedIncludes = [
+        'artists',
+    ];
 
-    protected array $allowedFilters = [];
+    protected array $allowedFilters = [
+        'artist_ids',
+    ];
 
     public function search(string $isrc): JsonResponse
     {

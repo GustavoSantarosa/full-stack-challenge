@@ -16,6 +16,13 @@ class TrackService extends BaseService
 {
     protected $model = Track::class;
 
+    protected array $searchableColumns = [
+        'isrc',
+        'title',
+        'release_date',
+        'duration',
+    ];
+
     public function search(string $isrc): Data
     {
         abort_if(
@@ -36,11 +43,7 @@ class TrackService extends BaseService
 
             while ($offset < $total) {
                 foreach ($track['items'] as $item) {
-                    if ($sync = true) {
-                        InsertTrackJob::dispatchSync($item, $isrc);
-                    } else {
-                        InsertTrackJob::dispatch($item, $isrc);
-                    }
+                    InsertTrackJob::dispatch($item, $isrc);
                 }
 
                 $offset += $limit;
