@@ -9,6 +9,7 @@
 - Configurado a middleware do padrão service no projeto. @GustavoSantarosa
 - Configurado o bootstrap app adequadamente. @GustavoSantarosa
 - Criado um esboço da modelagem de dados do projeto. @GustavoSantarosa
+- Instalado o angular no projeto. @GustavoSantarosa
 
 # EN
 
@@ -17,3 +18,4 @@
 - Configured the service pattern middleware in the project. @GustavoSantarosa
 - Properly configured the bootstrap app. @GustavoSantarosa
 - Created a draft of the project's data modeling. @GustavoSantarosa
+- Installed Angular in the project. @GustavoSantarosa
