@@ -1,31 +1,26 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { BaseApiService } from './base-api.service';
+import { catchError, Observable, of, tap } from 'rxjs';
 
-// track.service.ts
 @Injectable({ providedIn: 'root' })
-export class TrackService {
-  private apiUrl = 'http://127.0.0.1:8000/tracks/v1';
-
-  constructor(private http: HttpClient) {}
-
-  listTracks(params: any, includes?: string[]): Observable<any> {
-    const queryParams = { ...params };
-    if (includes && includes.length) {
-      queryParams['includes'] = includes.join(',');
-    }
-    return this.http.get(`${this.apiUrl}`, { params: queryParams });
-  }
-
-  getTrack(id: number, includes?: string[]): Observable<any> {
-    const queryParams: any = {};
-    if (includes && includes.length) {
-      queryParams['includes'] = includes.join(',');
-    }
-    return this.http.get(`${this.apiUrl}/${id}`, { params: queryParams });
+export class TrackService extends BaseApiService {
+  constructor(http: HttpClient) {
+    super(http, 'http://127.0.0.1:8000/tracks/v1');
   }
 
   searchByISRC(isrc: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/search/${isrc}`, {});
+    return this.http.post(`${this.apiUrl}/search/${isrc}`, {}).pipe(
+      tap((res: any) => {
+        this.showNotification(
+          res.message || 'Busca realizada!',
+          res.httpCode || 201
+        );
+      }),
+      catchError((err) => {
+        this.showNotification('Erro na busca!', err.status || 500);
+        return of(err);
+      })
+    );
   }
 }

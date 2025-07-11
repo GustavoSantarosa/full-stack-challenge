@@ -20,7 +20,7 @@ export class TrackModalComponent {
     private service: TrackService
   ) {
     this.service
-      .getTrack(data.id, ['artists'])
+      .get(data.id, ['artists'])
       .subscribe((res) => (this.track = res.data));
   }
 

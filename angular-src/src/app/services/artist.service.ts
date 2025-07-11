@@ -1,14 +1,10 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { BaseApiService } from './base-api.service';
 
 @Injectable({ providedIn: 'root' })
-export class ArtistService {
-  private apiUrl = 'http://127.0.0.1:8000/artists/v1';
-
-  constructor(private http: HttpClient) {}
-
-  listArtists(params?: any): Observable<any> {
-    return this.http.get(this.apiUrl, { params });
+export class ArtistService extends BaseApiService {
+  constructor(http: HttpClient) {
+    super(http, 'http://127.0.0.1:8000/artists/v1');
   }
 }

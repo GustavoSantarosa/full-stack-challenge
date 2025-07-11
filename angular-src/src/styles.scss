@@ -2,3 +2,30 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.toast-success {
+  background-color: #43a047 !important;
+  color: #fff !important;
+}
+.toast-info {
+  background-color: #1976d2 !important;
+  color: #fff !important;
+}
+.toast-warning {
+  background-color: #fbc02d !important;
+  color: #222 !important;
+}
+.toast-error {
+  background-color: #e53935 !important;
+  color: #fff !important;
+}
+
+.toast-custom-navbar {
+  top: 67px !important; /* ajuste conforme a altura da sua navbar */
+  right: 0;
+  left: auto;
+  width: auto;
+  position: fixed;
+  z-index: 9999;
+  margin-right: 5px;
+}

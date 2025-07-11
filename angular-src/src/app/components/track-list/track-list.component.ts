@@ -49,7 +49,7 @@ export class TrackListComponent implements OnInit {
   }
 
   carregarArtistas(): void {
-    this.artistService.listArtists().subscribe((res) => {
+    this.artistService.list().subscribe((res) => {
       this.artistas = res.data;
     });
   }
@@ -65,7 +65,7 @@ export class TrackListComponent implements OnInit {
       params['filter[artist_ids]'] = this.filtroArtista;
     }
 
-    this.trackService.listTracks(params).subscribe((res) => {
+    this.trackService.list(params).subscribe((res) => {
       this.tracks = res.data;
       this.total = res.pagination.total;
     });

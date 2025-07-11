@@ -26,6 +26,7 @@
 - Iniciado um esboço do readme do projeto. @GustavoSantarosa
 - Ajustado o readme do projeto para conter as informações necessárias. @GustavoSantarosa
 - Ajustado alguns erros na comunicação http do angular. @GustavoSantarosa
+- Configurado notificaçoes no angular.  @GustavoSantarosa
 
 # EN
 
@@ -51,3 +52,4 @@
 - Started a draft of the project's README. @GustavoSantarosa
 - Adjusted the README to include necessary information. @GustavoSantarosa
 - Fixed some HTTP communication errors in Angular. @GustavoSantarosa
+- Configured notifications in Angular. @GustavoSantarosa
