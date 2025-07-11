@@ -1,0 +1,40 @@
+<mat-form-field
+  appearance="outline"
+  style="width: 100%; max-width: 500px; margin-bottom: 1rem"
+>
+  <mat-label>Buscar por ISRC</mat-label>
+  <input matInput [(ngModel)]="isrc" placeholder="Digite o ISRC" />
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="buscar()">Buscar</button>
+
+<mat-progress-bar
+  *ngIf="carregando"
+  mode="indeterminate"
+  style="margin-top: 1rem"
+></mat-progress-bar>
+
+<ng-container *ngIf="buscou && !track && !carregando">
+  <p style="margin-top: 1rem">
+    Nenhum resultado encontrado para <strong>{{ isrc }}</strong>
+  </p>
+</ng-container>
+
+<mat-card *ngIf="track" style="margin-top: 1rem">
+  <mat-card-header>
+    <mat-card-title>{{ track.title }}</mat-card-title>
+    <mat-card-subtitle>{{ track.artists?.join(", ") }}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="track.album_thumb" alt="Imagem do álbum" />
+  <mat-card-content>
+    <p>Lançamento: {{ track.release_date }}</p>
+    <p>Duração: {{ track.duration }}</p>
+    <p>Disponível no Brasil: {{ track.available_in_br ? "Sim" : "Não" }}</p>
+    <audio [src]="track.preview_url" controls></audio>
+  </mat-card-content>
+  <mat-card-actions>
+    <a mat-button color="accent" [href]="track.spotify_url" target="_blank"
+      >Ver no Spotify</a
+    >
+  </mat-card-actions>
+</mat-card>

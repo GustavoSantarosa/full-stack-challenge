@@ -1,0 +1,36 @@
+<mat-form-field appearance="outline">
+  <mat-label>Filtrar por artista</mat-label>
+  <mat-select
+    [(ngModel)]="filtroArtista"
+    (selectionChange)="filtrarPorArtista()"
+  >
+    <mat-option *ngIf="artistas.length === 0" disabled>
+      (Nenhum artista encontrado)
+    </mat-option>
+
+    <mat-option *ngFor="let artista of artistas" [value]="artista.id">
+      {{ artista.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-raised-button color="primary" (click)="resetarFiltros()">
+  Limpar Filtros
+</button>
+
+<mat-list>
+  <mat-list-item *ngFor="let track of tracks" (click)="abrirModal(track.id)">
+    <img matListAvatar [src]="track.album_thumb" />
+    <div matLine>{{ track.title }}</div>
+    <div matLine>{{ track.artists?.join(", ") }}</div>
+    <mat-icon matListIcon *ngIf="track.available_in_br">check_circle</mat-icon>
+    <mat-icon matListIcon *ngIf="!track.available_in_br">cancel</mat-icon>
+  </mat-list-item>
+</mat-list>
+
+<mat-paginator
+  [length]="total"
+  [pageSize]="5"
+  [pageSizeOptions]="[5, 10, 25]"
+  (page)="mudarPagina($event)"
+></mat-paginator>
