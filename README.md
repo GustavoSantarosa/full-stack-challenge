@@ -71,3 +71,24 @@ Uma vez armazenados os dados, precisamos exibí-los através de uma webpage púb
 * Curioso
 * Gostar de trabalhar em equipe
 * Compromissado
+
+
+## O que foi feito
+
+Foi desenvolvida uma solução full-stack para atender aos requisitos do desafio, utilizando Laravel como backend e MySQL como banco de dados. O sistema integra-se à API do Spotify para buscar informações das faixas musicais a partir dos ISRCs fornecidos, armazena os dados em banco e os exibe em uma página web pública, ordenados alfabeticamente pelo título da faixa.
+
+Principais funcionalidades implementadas:
+
+- Integração com a API do Spotify para coleta dos dados das faixas.
+- Armazenamento das informações relevantes em banco de dados MySQL.
+- Exibição dos dados em uma interface web responsiva.
+- Indicação de disponibilidade das faixas no Brasil.
+- Player de prévia do áudio e link direto para o Spotify.
+- Documentação da API disponível via Swagger.
+
+## URLs úteis
+
+- Documentação Swagger da API: [http://localhost:8000/documentation](http://localhost:8000/documentation)
+- Página pública de exibição das faixas: `http://localhost:8000/faixas`
+- Endpoint principal da API: `http://localhost:8000/api/faixas`
+- Repositório do projeto: `<inserir URL do fork aqui>`
