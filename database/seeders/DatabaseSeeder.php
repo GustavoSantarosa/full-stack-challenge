@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Track;
+use App\Models\Artist;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -13,11 +15,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        Artist::factory()
+            ->count(5)
+            ->create()
+            ->each(function ($artist) {
+                $tracks = Track::factory()->count(2)->create();
+                $artist->tracks()->attach($tracks->pluck('id')->toArray());
+            });
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
     }
 }
