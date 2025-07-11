@@ -11,6 +11,7 @@
 - Criado um esboço da modelagem de dados do projeto. @GustavoSantarosa
 - Instalado o angular no projeto. @GustavoSantarosa
 - Finalizado um ajuste para se bindar o phpcs no projeto. @GustavoSantarosa
+- Criado uma action do github para rodar o pint ao fazer um push. @GustavoSantarosa
 
 # EN
 
@@ -21,3 +22,4 @@
 - Created a draft of the project's data modeling. @GustavoSantarosa
 - Installed Angular in the project. @GustavoSantarosa
 - Finalized an adjustment to bind phpcs in the project. @GustavoSantarosa
+- Created a GitHub action to run pint on push. @GustavoSantarosa
