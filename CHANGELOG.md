@@ -25,6 +25,7 @@
 - Configurado o default de paginação LENGTH. @GustavoSantarosa
 - Iniciado um esboço do readme do projeto. @GustavoSantarosa
 - Ajustado o readme do projeto para conter as informações necessárias. @GustavoSantarosa
+- Ajustado alguns erros na comunicação http do angular. @GustavoSantarosa
 
 # EN
 
@@ -49,3 +50,4 @@
 - Set the default pagination length. @GustavoSantarosa
 - Started a draft of the project's README. @GustavoSantarosa
 - Adjusted the README to include necessary information. @GustavoSantarosa
+- Fixed some HTTP communication errors in Angular. @GustavoSantarosa
