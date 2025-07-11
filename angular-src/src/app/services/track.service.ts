@@ -10,7 +10,7 @@ export class TrackService extends BaseApiService {
   }
 
   searchByISRC(isrc: string): Observable<any> {
-    return this.http.post(`${this.apiUrl}/search/${isrc}`, {}).pipe(
+    return this.post(`search/${isrc}`, {}).pipe(
       tap((res: any) => {
         this.showNotification(
           res.message || 'Busca realizada!',

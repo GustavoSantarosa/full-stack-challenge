@@ -30,6 +30,7 @@
 - Configurado o baseHandle no backend. @GustavoSantarosa
 - Ajustado o retorno 400 no angular. @GustavoSantarosa
 - Configurado o hashId no projeto. @GustavoSantarosa
+- Introduzido a configuração de lang no projeto por parte do angular. @GustavoSantarosa
 
 # EN
 
@@ -59,3 +60,4 @@
 - Configured the baseHandle in the backend. @GustavoSantarosa
 - Adjusted the 400 response in Angular. @GustavoSantarosa
 - Configured HashId in the project. @GustavoSantarosa
+- Introduced language configuration in the project via Angular. @GustavoSantarosa

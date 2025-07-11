@@ -3,6 +3,11 @@ import { ToastrService } from 'ngx-toastr';
 import { inject } from '@angular/core';
 import { catchError, Observable, of, tap } from 'rxjs';
 
+function getLangFromCookie(): string | undefined {
+  const match = document.cookie.match(/(?:^|;\s*)lang=([^;]*)/);
+  return match ? decodeURIComponent(match[1]) : undefined;
+}
+
 export class BaseApiService {
   protected defaultPage = 1;
   protected defaultPerPage = 10;
@@ -11,13 +16,36 @@ export class BaseApiService {
 
   constructor(protected http: HttpClient, protected apiUrl: string) {}
 
+  addLangParam(params?: any): any {
+    const lang = getLangFromCookie();
+    return { ...params, ...(lang ? { lang } : {}) };
+  }
+
+  post(prefix: string, body: any, params?: any): Observable<any> {
+    const finalParams = this.addLangParam(params);
+    const url = `${this.apiUrl}/${prefix}`;
+    return this.http.post(url, body, { params: finalParams }).pipe(
+      tap((res: any) => {
+        this.showNotification(
+          res.message || 'Requisição realizada!',
+          res.httpCode || 200
+        );
+      }),
+      catchError((err) => {
+        this.showNotification('Erro na requisição!', err.status || 500);
+        return of(err);
+      })
+    );
+  }
+
   list(params?: any): Observable<any> {
     const mergedParams = {
       page: this.defaultPage,
       per_page: this.defaultPerPage,
       ...params,
     };
-    return this.http.get(this.apiUrl, { params: mergedParams }).pipe(
+    const finalParams = this.addLangParam(mergedParams);
+    return this.http.get(this.apiUrl, { params: finalParams }).pipe(
       tap((res: any) => {
         this.showNotification(
           res.message || 'Requisição realizada!',
@@ -32,7 +60,8 @@ export class BaseApiService {
   }
 
   get(id: number, params?: any): Observable<any> {
-    return this.http.get(`${this.apiUrl}/${id}`, { params }).pipe(
+    const finalParams = this.addLangParam(params);
+    return this.http.get(`${this.apiUrl}/${id}`, { params: finalParams }).pipe(
       tap((res: any) => {
         this.showNotification(
           res.message || 'Requisição realizada!',

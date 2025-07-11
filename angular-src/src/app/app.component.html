@@ -1,6 +1,32 @@
 <mat-toolbar color="primary">
   <span>🎧 Catálogo de Faixas</span>
   <span class="spacer"></span>
+
+  <div class="language-select-wrapper">
+    <a nz-dropdown [nzDropdownMenu]="menu" class="language-dropdown-trigger">
+      <img [src]="bandeiraSelecionada" alt="Idioma selecionado" />
+    </a>
+    <nz-dropdown-menu
+      #menu="nzDropdownMenu"
+      nzClassName="language-dropdown-menu-custom"
+    >
+      <ul nz-menu>
+        <li
+          nz-menu-item
+          *ngFor="let lang of linguas"
+          (click)="onIdiomaChange(lang.value)"
+        >
+          <img
+            [src]="lang.flag"
+            alt="{{ lang.label }}"
+            class="language-option-flag"
+          />
+          <span>{{ lang.label }}</span>
+        </li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
+
   <button mat-button routerLink="/tracks">Listagem</button>
   <button mat-button routerLink="/search">Buscar ISRC</button>
 </mat-toolbar>
