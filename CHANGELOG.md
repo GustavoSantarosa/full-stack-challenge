@@ -12,6 +12,7 @@
 - Instalado o angular no projeto. @GustavoSantarosa
 - Finalizado um ajuste para se bindar o phpcs no projeto. @GustavoSantarosa
 - Criado uma action do github para rodar o pint ao fazer um push. @GustavoSantarosa
+- Iniciado a configuração do swagger. @GustavoSantarosa
 
 # EN
 
@@ -23,3 +24,4 @@
 - Installed Angular in the project. @GustavoSantarosa
 - Finalized an adjustment to bind phpcs in the project. @GustavoSantarosa
 - Created a GitHub action to run pint on push. @GustavoSantarosa
+- Started configuring Swagger. @GustavoSantarosa

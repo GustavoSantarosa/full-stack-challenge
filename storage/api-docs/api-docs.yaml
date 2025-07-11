@@ -1,0 +1,141 @@
+openapi: 3.0.0
+info:
+  title: API de Faixas Musicais
+  version: 1.0.0
+  description: API para buscar faixas musicais via ISRC usando Spotify
+
+servers:
+  - url: http://localhost:8000
+
+paths:
+  /faixas/search:
+    post:
+      summary: Adiciona um nova faixa musical pelo ISRC
+      tags:
+        - Faixas
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                isrc:
+                  type: string
+              required:
+                - isrc
+      responses:
+        '201':
+          description: Faixa encontrada e adicionada com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  faixa:
+                    type: object
+                    properties:
+                      isrc:
+                        type: string
+                      title:
+                        type: string
+                      artists:
+                        type: array
+                        items:
+                          type: string
+                      album_thumb:
+                        type: string
+                      release_date:
+                        type: string
+                      duration:
+                        type: string
+                      preview_url:
+                        type: string
+                      spotify_url:
+                        type: string
+                      available_in_br:
+                        type: boolean
+        '400':
+          description: Faixa não encontrada ou já existente
+
+  /faixas:
+    get:
+      summary: Lista todas as faixas musicais
+      tags:
+        - Faixas
+      responses:
+        '200':
+          description: Lista de faixas musicais
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    isrc:
+                      type: string
+                    title:
+                      type: string
+                    artists:
+                      type: array
+                      items:
+                        type: string
+                    album_thumb:
+                      type: string
+                    release_date:
+                      type: string
+                    duration:
+                      type: string
+                    preview_url:
+                      type: string
+                    spotify_url:
+                      type: string
+                    available_in_br:
+                      type: boolean
+        '400':
+          description: Erro ao buscar faixas
+  /faixas/{id}:
+    get:
+      summary: Busca faixa musical pelo id
+      tags:
+        - Faixas
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: Código id da faixa
+      responses:
+        '200':
+          description: Dados da faixa encontrada
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isrc:
+                    type: string
+                  title:
+                    type: string
+                  artists:
+                    type: array
+                    items:
+                      type: string
+                  album_thumb:
+                    type: string
+                  release_date:
+                    type: string
+                  duration:
+                    type: string
+                  preview_url:
+                    type: string
+                  spotify_url:
+                    type: string
+                  available_in_br:
+                    type: boolean
+        '400':
+          description: Faixa não encontrada ou já existente
