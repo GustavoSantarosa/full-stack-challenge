@@ -18,6 +18,7 @@
 - Criado a rota search para poder efetuar as buscas de faixas no spotify de acordo com o ISRC e tambem o index e show. @GustavoSantarosa
 - Ajustado o script do composer de porta 8001 para 8000. @GustavoSantarosa
 - Criado o front em angular aceitavelmente. @GustavoSantarosa
+- Criado a rota de listagem para artistas. @GustavoSantarosa
 
 # EN
 
@@ -35,3 +36,4 @@
 - Created the search route to perform track searches on Spotify based on ISRC, as well as the index and show routes. @GustavoSantarosa
 - Adjusted the composer script from port 8001 to 8000. @GustavoSantarosa
 - Created the front end in Angular acceptably. @GustavoSantarosa
+- Created the route for listing artists. @GustavoSantarosa
