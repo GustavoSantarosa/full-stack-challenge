@@ -6,7 +6,6 @@ namespace App\Http\Middleware;
 
 use Illuminate\Foundation\Configuration\Middleware;
 use Illuminate\Routing\Middleware\SubstituteBindings;
-use QuantumTecnology\ControllerBasicsExtension\Middleware\CheckRouteLevelMiddleware;
 use QuantumTecnology\ControllerBasicsExtension\Middleware\CryptographyMiddleware;
 
 class AppMiddleware
@@ -21,8 +20,8 @@ class AppMiddleware
             ])
             ->use([])
             ->alias([
-                'encrypt'      => CryptographyMiddleware::class,
-                'service'      => ServiceMiddleware::class,
+                'encrypt' => CryptographyMiddleware::class,
+                'service' => ServiceMiddleware::class,
             ])->prepend([
                 //
             ])->append([

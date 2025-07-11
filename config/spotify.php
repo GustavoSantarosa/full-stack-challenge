@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types = 1);
+
 return [
 
     /*
@@ -23,7 +25,7 @@ return [
     */
 
     'auth' => [
-        'client_id' => env('SPOTIFY_CLIENT_ID'),
+        'client_id'     => env('SPOTIFY_CLIENT_ID'),
         'client_secret' => env('SPOTIFY_CLIENT_SECRET'),
     ],
 
@@ -39,8 +41,8 @@ return [
 
     'default_config' => [
         'country' => null,
-        'locale' => null,
-        'market' => null,
+        'locale'  => null,
+        'market'  => null,
     ],
 
 ];
