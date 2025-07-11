@@ -18,7 +18,12 @@ export class TrackService extends BaseApiService {
         );
       }),
       catchError((err) => {
-        this.showNotification('Erro na busca!', err.status || 500);
+        const apiMessage =
+          err?.error?.message ||
+          err?.error?.Message ||
+          err?.message ||
+          'Erro na requisição!';
+        this.showNotification(apiMessage, err.status || 500);
         return of(err);
       })
     );

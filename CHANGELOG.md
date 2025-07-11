@@ -28,6 +28,7 @@
 - Ajustado alguns erros na comunicação http do angular. @GustavoSantarosa
 - Configurado notificaçoes no angular.  @GustavoSantarosa
 - Configurado o baseHandle no backend. @GustavoSantarosa
+- Ajustado o retorno 400 no angular. @GustavoSantarosa
 
 # EN
 
@@ -55,3 +56,4 @@
 - Fixed some HTTP communication errors in Angular. @GustavoSantarosa
 - Configured notifications in Angular. @GustavoSantarosa
 - Configured the baseHandle in the backend. @GustavoSantarosa
+- Adjusted the 400 response in Angular. @GustavoSantarosa
